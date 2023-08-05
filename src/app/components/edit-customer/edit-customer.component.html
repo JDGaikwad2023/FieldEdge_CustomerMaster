@@ -1,0 +1,126 @@
+<div class="jumbotron">
+  <div class="container">
+    <form (submit)="submitUpdate()">
+      <div class="row">
+        <h3 class="text-warning">Edit Customer</h3>
+          <div class="col-md-4">
+                  <div class="form-group">
+                      <label>Salutation</label>
+                      <input [(ngModel)]="Customer.salutation" [value]="Customer.salutation" name="salutation" type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                      <label>Initials</label>
+                      <input [(ngModel)]="Customer.initials" [value]="Customer.initials" name="initials" type="text"  class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label>First Name</label>
+                    <input [(ngModel)]="Customer.firstname" [value]="Customer.firstname" name="firstname" type="text"  class="form-control" />
+
+                  </div>
+                  <div class="form-group">
+                    <label>First Name ASCII</label>
+                    <input [(ngModel)]="Customer.firstname_ascii" [value]="Customer.firstname_ascii" name="firstname_ascii" type="text"  class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label>Gender</label>
+                    <input [(ngModel)]="Customer.gender" [value]="Customer.gender" name="gender" type="text"  class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label>First Name Country Rank</label>
+                    <input [(ngModel)]="Customer.firstname_country_rank" [value]="Customer.firstname_country_rank" name="firstname_country_rank" type="text"  class="form-control"/>
+                  </div>
+                <div class="form-group">
+                  <label>First Name Country Frequency</label>
+                  <input [(ngModel)]="Customer.firstname_country_frequency" [value]="Customer.firstname_country_frequency" name="firstname_country_frequency" type="text"  class="form-control" />
+                </div>
+          </div>
+          <div class="col-md-4">
+      <div class="form-group">
+        <label>Last Name</label>
+        <input [(ngModel)]="Customer.lastname" [value]="Customer.lastname" name="lastname" type="text"  class="form-control"/>
+
+        <div class="form-group">
+          <label>Last Name ASCII</label>
+          <input [(ngModel)]="Customer.lastname_ascii" [value]="Customer.lastname_ascii" name="lastname_ascii" type="text"  class="form-control" />
+        </div>
+        <div class="form-group">
+          <label>Last Name Country Rank</label>
+          <input [(ngModel)]="Customer.lastname_country_rank" [value]="Customer.lastname_country_rank" name="lastname_country_rank" type="text"  class="form-control" />
+        </div>
+        <div class="form-group">
+          <label>Last Name Country Frequency</label>
+          <input [(ngModel)]="Customer.lastname_country_frequency" [value]="Customer.lastname_country_frequency" name="lastname_country_frequency" type="text"  class="form-control" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input [(ngModel)]="Customer.email" [value]="Customer.email" name="email" type="text"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" required />
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">Email is required</div>
+              <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input [(ngModel)]="Customer.password" [value]="Customer.password" name="password" type="password"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+    </div>
+    <div class="form-group">
+      <label>Country Code</label>
+      <input [(ngModel)]="Customer.country_code" [value]="Customer.country_code" name="country_code" type="text"  class="form-control" />
+  </div>
+
+    </div>
+          </div>
+          <div class="col-md-4">
+        <div class="form-group">
+          <label>Country Code Alpha</label>
+          <input [(ngModel)]="Customer.country_code_alpha" [value]="Customer.country_code_alpha" name="country_code_alpha" type="text"  class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>Country Name</label>
+        <input [(ngModel)]="Customer.country_name" [value]="Customer.country_name" name="country_name" type="text"  class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Primary Language Code</label>
+        <input [(ngModel)]="Customer.primary_language_code" [value]="Customer.primary_language_code" name="primary_language_code" type="text" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Primary Language</label>
+        <input [(ngModel)]="Customer.primary_language" [value]="Customer.primary_language" name="primary_language" type="text"  class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Balance</label>
+        <input [(ngModel)]="Customer.balance" [value]="Customer.balance" name="balance" type="text"  class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input [(ngModel)]="Customer.phone_Number" [value]="Customer.phone_Number" name="phone_Number" type="text"  class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Currency</label>
+        <input [(ngModel)]="Customer.currency" [value]="Customer.currency" name="currency" type="text"  class="form-control"/>
+      </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <hr>
+          <button class="btn btn-warning">Update</button>
+          <button class="btn btn-dark m-2" routerLink="/customers">Go Back</button>
+      </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+

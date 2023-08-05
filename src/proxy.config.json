@@ -1,0 +1,6 @@
+{
+  "/api": {
+  "target": "https://getinvoices.azurewebsites.net/",
+  "secure": false
+  }
+  }

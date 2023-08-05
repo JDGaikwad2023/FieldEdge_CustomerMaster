@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body
+{
+  font-family: 'Ubuntu', sans-serif!important;
+	background-color:white !important;
+	/* background-image: url("assets/contact-bg.png"); */
+	height: 500px;
+	background-attachment: fixed;
+	background-repeat: no-repeat, repeat;
+	background-position: center;
+  background-clip: border-box;
+
+}
+
+.contact-img{
+  width: 150px;
+  height: 140px;
+  /* border-radius: 50%; */
+  border: 1px solid blanchedalmond;
+}
+.contact-img-big{
+  width: 200px;
+  border-radius: 50%;
+}
+
+.footer {
+  position:fixed;
+  bottom:0;
+height: 40px;
+background-color: black;
+text-align: center;
+color: white;
+}
